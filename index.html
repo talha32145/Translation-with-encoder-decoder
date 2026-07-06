@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>English → Urdu Translator</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>🌍 English → Urdu Translator</h1>
+
+<p class="subtitle">
+Powered by TensorFlow Encoder–Decoder LSTM
+</p>
+
+<form id="translatorForm">
+
+<label>English Sentence</label>
+
+<textarea
+id="english"
+placeholder="Enter English sentence..."
+required
+></textarea>
+
+<div class="counter">
+<span id="count">0</span> Characters
+</div>
+
+<button type="submit">
+
+Translate
+
+</button>
+
+</form>
+
+<div class="loading" id="loading">
+Translating...
+</div>
+
+<div class="result">
+
+<label>Urdu Translation</label>
+
+<div id="urdu" class="urdu-box">
+
+Your translation will appear here...
+
+</div>
+
+<button id="copyBtn">
+
+Copy Translation
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
